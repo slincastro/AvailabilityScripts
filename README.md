@@ -33,9 +33,8 @@ Copy the code snippet in Requests > authorization_request.py file :
 
 If you need more services you can create more callers pointing to the new service and including a new [line in](https://github.com/slincastro/AvailabilityScripts/blob/bec97887de50458c4ecf1c1c93aa767cd16995fb/main.py#L38) :
 
-`...`
 `write_requests("<your new servicename>", authorization_requests_caller<or a new caller>)`
-`...`
+
 
 
 
