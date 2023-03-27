@@ -28,8 +28,6 @@ include that code in the Requests>authorization_request.py file
 
 `python main.py`
 
-`puthon main-xml.py`
-
 ## Cron Creation :
 
 1. Open Terminal.
