@@ -38,5 +38,6 @@ def monitor(hours_to_monitor, service_name):
         write_requests(service_name, authorization_requests_caller)
         print("-------------------------------- " + str(count) + " request")
 
+number_of_hours_to_monitor = 9
 service_name_to_monitor = "Authorization_Service"
-monitor(9,service_name_to_monitor)
+monitor(number_of_hours_to_monitor,service_name_to_monitor)
