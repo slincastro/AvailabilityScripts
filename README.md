@@ -2,7 +2,8 @@
 
 - Install python 
 `brew install python`
-!Use python 2.7
+
+> ! Use python 2.7
 
 - You can use VSCode or Pycharm as Code Editor
 
@@ -19,6 +20,7 @@
 - Configure service :
 
 `change service_name_to_monitor = "your_service_name"` 
+[change here](https://github.com/slincastro/AvailabilityScripts/blob/b490c928ce08f9f4b3a66f227fe6ae6d95b17acc/main.py#L41)
 > the .csv file is going to be named : your_service_name_DATE.csv
 - Use postman with the collection service and : 
 
