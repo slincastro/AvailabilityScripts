@@ -2,12 +2,12 @@
 import time
 import csv
 from datetime import datetime
-from Requests import authorization_Requests
+from Requests import authorization_requests_caller
 
-def write_requests(service_name):
-    sf_response = authorization_Requests.get_request_status_code_security_filters()
+def write_requests(service_name, service_caller):
+    sf_response = service_caller.get_request_with_sf()
     now = datetime.now()
-    auth_response = authorization_Requests.get_response_direct_service()
+    auth_response = service_caller.get_request_direct_service()
     date = now.strftime("%d/%m/%Y %H:%M:%S")
     date_name = now.strftime("%d_%m_%Y")
 
@@ -35,7 +35,7 @@ def monitor(hours_to_monitor, service_name):
     for i in range(int(range_time)):
         count = count + 1
         time.sleep(sleep_time)
-        write_requests(service_name)
+        write_requests(service_name, authorization_requests_caller)
         print("-------------------------------- " + str(count) + " request")
 
 service_name_to_monitor = "Authorization_Service"

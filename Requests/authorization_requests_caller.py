@@ -1,6 +1,6 @@
 import requests
 
-def get_request_status_code_security_filters():
+def get_request_with_sf():
     url = ""
 
     payload = ''
@@ -12,7 +12,7 @@ def get_request_status_code_security_filters():
 
     return response
 
-def get_response_direct_service():
+def get_request_direct_service():
     url = ""
 
     payload = ''
