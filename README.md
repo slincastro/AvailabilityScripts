@@ -31,7 +31,17 @@ Copy the code snippet in Requests > authorization_request.py file :
 * [Hit Service With Sf](https://github.com/slincastro/AvailabilityScripts/blob/b490c928ce08f9f4b3a66f227fe6ae6d95b17acc/Requests/authorization_Requests.py#L3)
 * [Hit Service Directly](https://github.com/slincastro/AvailabilityScripts/blob/b490c928ce08f9f4b3a66f227fe6ae6d95b17acc/Requests/authorization_Requests.py#L15)
 
-If you need more services you can create more callers pointing to the new service and including a new [line in](https://github.com/slincastro/AvailabilityScripts/blob/bec97887de50458c4ecf1c1c93aa767cd16995fb/main.py#L38) :
+## To configure more services :
+
+If you need configure more services you should :
+ 
+ * create a new caller in Requests Package with the same methods in authorization_requests_caller.py
+ * Or duplicate authorization_requests_caller.py and rename the file.
+ 
+ * Add the new class to hte imports in main.py
+ `from Requests import <your new caller>`
+ 
+ * include the new caller in a new [line in](https://github.com/slincastro/AvailabilityScripts/blob/bec97887de50458c4ecf1c1c93aa767cd16995fb/main.py#L38) :
 
 `write_requests("<your new servicename>", authorization_requests_caller<or a new caller>)`
 
