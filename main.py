@@ -21,17 +21,16 @@ def write_requests(service_name, service_caller):
             employee_writer_date.writerow([sf_response.status_code, auth_response.status_code, date ])#, sf_response.text,auth_response.text])
 
 
-def in_minutes(minutes):
+def in_secs(minutes):
     return minutes * 60
 
 def get_range_time(hours_to_monitor, sleep_time):
-    return (hours_to_monitor * 60 )/ sleep_time
+    return (hours_to_monitor * 60 * 60)/ sleep_time
 
 def monitor(hours_to_monitor, service_name):
     count = 0
-    sleep_time = in_minutes(0.5)
+    sleep_time = in_secs(0.5)
     range_time = get_range_time(hours_to_monitor, sleep_time)
-
     for i in range(int(range_time)):
         count = count + 1
         time.sleep(sleep_time)
