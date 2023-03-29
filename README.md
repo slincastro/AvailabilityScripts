@@ -35,8 +35,8 @@ Copy the code snippet in Requests > authorization_request.py file :
 
 If you need configure more services you should :
  
- * create a new caller in Requests Package with the same methods in authorization_requests_caller.py
- * Or duplicate authorization_requests_caller.py and rename the file.
+ * create a new caller in Requests Package with the same methods in authorization_requests_caller_example.py
+ * Or duplicate authorization_requests_caller_example.py and rename the file.
  
  * Add the new class to hte imports in main.py
  `from Requests import <your new caller>`
@@ -44,8 +44,6 @@ If you need configure more services you should :
  * include the new caller in a new [line in](https://github.com/slincastro/AvailabilityScripts/blob/bec97887de50458c4ecf1c1c93aa767cd16995fb/main.py#L38) :
 
 `write_requests("<your new servicename>", authorization_requests_caller<or a new caller>)`
-
-
 
 
 ## To Run :
